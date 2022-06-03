@@ -1,0 +1,29 @@
+
+body {
+	/* width: 100%; */
+	/* height: 100%; */
+	/* color: #fff; */
+	
+    background: #0d0d0d;
+    /* background: rgb(249,247,161); */
+    /* background: -moz-radial-gradient(circle, rgba(249,247,161,1) 0%, rgba(194,175,154,1) 64%); */
+    /* background: -webkit-radial-gradient(circle, rgba(249,247,161,1) 0%, rgba(194,175,154,1) 64%); */
+    /* background: radial-gradient(circle, rgba(249,247,161,1) 0%, rgba(194,175,154,1) 64%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f7a1",endColorstr="#c2af9a",GradientType=1); */
+
+}
+
+
+.cianotipo1{background:#F7DB4F;}
+.gravuras1{background: #EC2049;}
+.livros1{background: #F26B38;}
+.modelos1{background: #A7226E;}
+.design1{background: #2F9599;}
+.preto1{background: #0d0d0d;}
+/* } */
+
+/* .footer p {
+	color: #666;
+	text-align: center;
+	max-width: none;
+} */

@@ -1,0 +1,73 @@
+
+
+  <!-- <a name="top">&nbsp;</a> -->
+
+<div class="container-fluid pt-5 pl-5 pr-5 pb-5">
+  
+  <div class="card-columns" id="main">
+  <!-- <div class="grid-container" id="main"> -->
+  <!-- <div id="main"> -->
+    <!-- <div class="example-grids"> -->
+      <!-- <div class="row" id='content'> -->
+        <!-- <div class="slot-0" id = "content0"> -->
+    <div class="card preto1">
+      <p>The full collection of the Thoreau Centre for the Blockchain Arts, by no particular order.
+        <br>
+        Read more about this project here --> https://github.com/oficinastk/
+        <br>
+        Thoreau.Centre.Blockchain.Arts
+        <br>
+        Images are stored on IPFS, please wait a bit for them to load
+      </p>
+    </div>
+
+    <div class="card" *ngFor="let asset of assets; let i = index">
+      <div class="card-body">
+        <!-- <a [href]="asset.url" [id]="asset.url" [attr.id]="asset.url"> -->
+        <a [href]="asset.url">
+          <img 
+            *ngIf="asset.type.startsWith('image')"
+            [src]="asset.loading ? imageLoadingUrl : asset.url"
+            width="100%"
+            loading="lazy"
+            (load)="onImageLoaded(i)">
+
+          <video
+            *ngIf="asset.type.startsWith('video')"
+            [src]="asset.loading ? imageLoadingUrl : asset.url"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            (loadstart)="onImageLoaded(i)"
+            loop="true"
+            autoplay="autoplay"
+            [muted]="true"
+            controls></video>
+          <embed
+            *ngIf="asset.type.startsWith('application')"
+            [src]="asset.loading ? imageLoadingUrl : asset.url"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            (loadstart)="onImageLoaded(i)"
+            [type]="asset.type">
+          <iframe
+            *ngIf="asset.type.startsWith('text')"
+            [src]="asset.loading ? imageLoadingUrl : asset.url"
+            loading="lazy"
+            (loadstart)="onImageLoaded(i)"></iframe>
+        </a>
+        <h5 class="card-title">{{ asset.title }}</h5>
+        <p class="card-text">{{ asset.artist }}</p>
+        <p class="card-text">{{ asset.type }}</p>
+      </div>
+    </div>
+
+    <!-- <div class="card preto1">
+      <img data-src="https://ipfs.infura.io/ipfs/QmT2DbG4NHBendE1S6jsNKpp255RyEVTfqPFxLBUzaxrGJ" src="imagens/loading.svg" class="lazyload" width="100%">
+    </div> -->
+  </div>
+
+</div>
+
+  
