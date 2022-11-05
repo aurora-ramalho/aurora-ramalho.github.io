@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { ApiService } from './api.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
+import { SafePipe } from './safe.pipe'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
